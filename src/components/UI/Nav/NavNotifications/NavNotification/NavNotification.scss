@@ -1,0 +1,46 @@
+.notification__list {
+    padding: 10;
+
+    li {
+        
+        &:not(:last-child) {
+            border-bottom: 1.1px solid rgb(221, 221, 221);
+        }
+
+        
+        .notification__icon {
+            align-self: center;
+            background-color: $main-green;
+            border-radius: 50%;
+            width: 60px;
+            height: 40px;
+            margin-right: 20px;
+            text-align: center;
+
+            i {
+                color: #fff;
+                font-size: 1.1875rem;
+                line-height: 40px;
+                margin-left: 7px;
+            }
+        }
+
+        .notification__name {
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: -1px;
+        }
+
+        .notification__desc {
+            font-weight: 400;
+            font-size: 0.8125rem;
+            margin-bottom: 6px;
+        }
+
+        .notification__date {
+            color: rgb(124, 124, 124);
+            font-size: 0.75rem;
+        }
+
+    }
+}
