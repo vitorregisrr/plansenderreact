@@ -10,10 +10,11 @@ const Layout = props => {
             {props.location.pathname !== '/auth'
                 ? <React.Fragment>
                         <MainHeader></MainHeader>
-
-                        <main className="MainContent">
-                            {props.children}
-                        </main>
+                        <div className="container">
+                            <main className="MainContent">
+                                {props.children}
+                            </main>
+                        </div>
                     </React.Fragment>
                 : props.children}
         </React.Fragment>

@@ -36,16 +36,13 @@ const HomeActions = props => {
         }
     ];
     return (
-        <div className="container">
-            <section className="HomeActions">
-                {actions.map(action => (
-                <HomeAction
-                    link={action.path}
-                    icon={action.icon}
-                    title={action.title}
-                    subtitle={action.subtitle}/>))}
-            </section>
-        </div>
+        <section className="HomeActions">
+            {actions.map(action => (<HomeAction
+                link={action.link}
+                icon={action.icon}
+                title={action.title}
+                subtitle={action.subtitle}/>))}
+        </section>
     )
 }
 
