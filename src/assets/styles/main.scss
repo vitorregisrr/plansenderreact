@@ -10,8 +10,8 @@
 // Import Components //
 @import './components/__all';
 
-//Import Pages //
-@import './pages/__all';
+//Import Containers //
+@import './containers/__all';
 
 
 body {
@@ -26,6 +26,10 @@ body {
         cursor: pointer;
     }
 
+}
+
+.MainContent{
+    margin-top: 80px;
 }
 
 code {

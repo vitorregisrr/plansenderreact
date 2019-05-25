@@ -1,14 +1,23 @@
-import React from 'react'
+import React from 'react';
+
+import {withRouter} from 'react-router-dom';
 
 import MainHeader from '../../components/MainHeader/MainHeader';
 
 const Layout = props => {
     return (
         <React.Fragment>
-            <MainHeader></MainHeader>
-            {props.children}
+            {props.location.pathname !== '/auth'
+                ? <React.Fragment>
+                        <MainHeader></MainHeader>
+
+                        <main className="MainContent">
+                            {props.children}
+                        </main>
+                    </React.Fragment>
+                : props.children}
         </React.Fragment>
     )
 }
 
-export default Layout;
+export default withRouter(Layout);
