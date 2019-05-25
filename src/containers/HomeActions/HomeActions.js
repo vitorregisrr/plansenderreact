@@ -6,7 +6,7 @@ const HomeActions = props => {
     const actions = [
         {
             link: '/submissoes',
-            icon: 'list',
+            icon: 'paper-plane',
             title: 'Submeter plano!',
             subtitle: "Cheque o status ou realize submissões de planos de estudo."
 
