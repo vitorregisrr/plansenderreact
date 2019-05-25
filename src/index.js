@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
 import * as serviceWorker from './serviceWorker';
+
+import App from './App';
+
+import './assets/styles/main.scss';
+
+//Font awesome icons
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck} from '@fortawesome/free-solid-svg-icons';
+library.add(faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,0 +1,33 @@
+//Import Variables //
+@import './variables/__all';
+
+// Import Utils //
+@import  './util/__all';
+
+//Import Mixins //
+@import './mixins/__all';
+
+// Import Components //
+@import './components/__all';
+
+//Import Pages //
+@import './pages/__all';
+
+
+body {
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media screen and (max-width: $breakpointSM) {
+        cursor: pointer;
+    }
+
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

@@ -1,0 +1,92 @@
+button{
+    border:none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    
+    &:focus{
+        outline: none;
+    }
+}
+
+@mixin button {
+    border-radius: 2px;
+    padding: 4px 14px;
+    border-radius: 3px;
+    padding: 10px 16px;
+    transition: all 0.4s;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+a[role="button"] {
+    text-decoration: none !important;
+}
+
+.button-green {
+    @include button();
+    background-color: $main-green;
+    border: 1.5px solid $main-green;
+    color: white;
+
+    &:hover,
+    .active {
+        background-color: darken($main-green, 10);
+        border-color: darken($main-green, 10);
+    }
+}
+
+.button-blue {
+    @include button();
+    background-color: $main-blue;
+    border: 1.5px solid $main-blue;
+    color: white;
+
+    &:hover,
+    .active {
+        background-color: darken($main-blue, 10);
+        border-color: darken($main-blue, 10);
+    }
+}
+
+.button-outline-green {
+    @include button();
+    background-color: rgba(255, 255, 255, 0);
+    border: 1.5px solid $main-green;
+    color: $main-green;
+
+    &:hover {
+        background-color: $main-green;
+        color: white;
+    }
+}
+
+.btn-group .button-outline-green {
+    padding: 8px 10px;
+
+    &:not(:last-child) {
+        border-right: none;
+    }
+
+    &.active {
+        background-color: $main-green;
+        color: white;
+    }
+
+    &:active {
+        outline: none;
+    }
+}
+
+.button-outline-white {
+    @include button();
+    background-color: rgba(255, 255, 255, 0);
+    border: 1.5px solid #fff;
+    color: #fff;
+
+    &:hover {
+        background-color: #fff;
+        color: black;
+    }
+}

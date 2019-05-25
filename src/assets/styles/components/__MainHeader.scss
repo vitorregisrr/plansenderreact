@@ -1,0 +1,176 @@
+.MainHeader {
+    width: 100%;
+    height: auto;
+    background-color: rgba(253, 253, 253, 0.822);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.123);
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+        @media only screen and (max-width: $breakpointXS) {
+            & {
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 150px;
+            }
+        }
+    }
+
+    img.brand {
+        height: 50px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .Notifications {
+            position: relative;
+
+            .toggle-icon {
+                background: none;
+                border: none;
+                color: rgb(177, 188, 201);
+                font-size: 1.5625rem;
+                transition: all 0.4s;
+                cursor: pointer;
+    
+                &:hover {
+                    color: rgb(170, 177, 185);
+                }
+            }
+
+            &__number {
+                $box-size: 6px;
+                position: absolute;
+                top: -2px;
+                left: 18px;
+                width: $box-size;
+                height: $box-size;
+                background-color: #ee422e;
+                font-size: 0.6875rem;
+                text-align: center;
+                line-height: $box-size;
+                border-radius: 50%;
+                padding: 5px;
+                color: white;
+            }
+
+            &__list {
+                padding: 10;
+
+                .Notification {
+                    
+                    &:not(:last-child) {
+                        border-bottom: 1.1px solid rgb(221, 221, 221);
+                    }
+
+                    
+                    &__icon {
+                        align-self: center;
+                        border-radius: 50%;
+                        background-color: $main-green;
+                        width: 60px;
+                        height: 40px;
+                        margin-right: 20px;
+
+                        .icon {
+                            color: #fff;
+                            font-size: 1.1875rem;
+                            margin-left: 10px;
+                            margin-top: 9px;
+                        }
+                    }
+
+                    &__name {
+                        font-weight: 600;
+                        font-size: 0.9375rem;
+                        margin-bottom: -1px;
+                    }
+
+                    &__desc {
+                        font-weight: 400;
+                        font-size: 0.8125rem;
+                        margin-bottom: 6px;
+                    }
+
+                    &__date {
+                        color: rgb(124, 124, 124);
+                        font-size: 0.75rem;
+                    }
+
+                }
+            }
+
+            .dropdown {
+                width: 350px;
+                left: -900%;
+
+                @media only screen and (max-width: $breakpointXS) {
+                    & {
+                        left: -120%;
+                        width: 80vw;
+                        transform-origin: left top;
+
+                    }
+                }
+            }
+        }
+
+        .User {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30px;
+            color: rgb(62, 63, 63);
+            transition: all 0.3s;
+
+            &:hover {
+                color: rgb(97, 99, 100);
+            }
+
+            img {
+                margin-right: 4px;
+                height: 40px;
+                width: 40px;
+                object-fit: contain;
+                border-radius: 2px;
+            }
+
+            &__name {
+                font-size: 1.0625rem;
+                font-weight: 600;
+                color: inherit;
+                padding-top: 10px;
+
+                .icon{
+                    margin-left: 6px;
+                }
+            }
+
+            .dropdown {
+                width: 230px;
+
+                @media only screen and (max-width: $breakpointXS) {
+                    & {
+                        left: -50%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width:  $breakpointXS) {
+        &__nav,
+        img.brand {
+            margin: 0;
+        }
+    }
+}

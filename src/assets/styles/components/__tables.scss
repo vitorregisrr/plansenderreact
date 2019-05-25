@@ -1,0 +1,79 @@
+.table {
+    width: 100%;
+    min-height: 80px;
+    border-spacing: 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table-white {
+    text-align: left;
+    border: none;
+    outline: none;
+
+    thead {
+        th {
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+    }
+
+    tbody tr {
+        @include card();
+    }
+
+    td,
+    th {
+        padding: 25px 20px;
+        font-size: 15px;
+        white-space:nowrap;
+        color: rgb(77, 77, 77);
+        font-weight: 400;
+
+        &:first-child{
+            padding-left: 50px;
+            @media (max-width: 624px) {
+                &{
+                    padding-left: 30px;
+                }
+            }
+        }
+
+        &.table-tools {
+            text-align: center;
+
+            button {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                background-color: rgb(226, 226, 226);
+                color: rgb(77, 77, 77);
+                -webkit-transition: all 0.4s ease-in;
+                -moz-transition: all 0.4s ease-in;
+                -ms-transition: all 0.4s ease-in;
+                -o-transition: all 0.4s ease-in;
+                transition: all 0.4s ease-in;
+
+                &:hover{
+                    background-color: rgb(128, 128, 128);
+                    color: rgb(231, 231, 231);
+                }
+
+                @media (max-width: 624px) {
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .spacer {
+        height: 8px;
+        background: transparent;
+        display: block;
+        position: relative;
+    }
+}

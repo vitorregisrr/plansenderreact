@@ -1,8 +1,13 @@
 import React from 'react'
 
+import MainHeader from '../../components/MainHeader/MainHeader';
+
 const Layout = props => {
-    return(
-        <div></div>
+    return (
+        <React.Fragment>
+            <MainHeader></MainHeader>
+            {props.children}
+        </React.Fragment>
     )
 }
 

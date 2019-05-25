@@ -1,0 +1,81 @@
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+        background-color: rgba(0, 0, 0, 0.664);
+        z-index: 2;
+
+        .modal__dialog {
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            z-index: 3;
+            width: 85vw;
+            min-height: 20vh;
+            position: fixed;
+            @include card();
+
+            &.small {
+                width: 40vw;
+            }
+
+            @media only screen and (max-width: 624px) {
+                &.small {
+                    width: 90vw;
+                }
+            }
+
+            .modal__header{
+                min-height: 10px;
+                border-bottom: 0.2px solid rgba(114, 114, 114, 0.911);
+                padding: 15px 15px;
+
+                .title{
+                    font-size: 25px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 0;
+                    margin: 0;
+                    color: rgb(39, 39, 39);
+                }
+
+                .description{
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin: 0;
+                    padding: 0;
+                    color: rgb(104, 104, 104);
+                }
+            }
+
+            .modal__body{
+                padding: 30px 20px;
+            }
+
+            .modal__footer{
+                -webkit-display: flex;
+                -moz-display: flex;
+                -ms-display: flex;
+                -o-display: flex;
+                display: flex;
+                justify-content: flex-end;
+                min-height: 10px;
+                padding: 15px 15px;
+            }
+        }
+    }
+}
