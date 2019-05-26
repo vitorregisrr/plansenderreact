@@ -34,7 +34,7 @@ const Submissions = props => {
                 status="pendentes"
                 data={pendentes}
                 title="Pendentes"
-                subtitle="Precisam ser submetidos"/>
+                subtitle="Turmas ainda não submetidas"/>
 
             <SubmissionsList
                 status="analises"
