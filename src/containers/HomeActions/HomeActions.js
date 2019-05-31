@@ -37,7 +37,8 @@ const HomeActions = props => {
     ];
     return (
         <section className="HomeActions">
-            {actions.map(action => (<HomeAction
+            {actions.map((action, i)=> (<HomeAction
+                key={i}
                 link={action.link}
                 icon={action.icon}
                 title={action.title}

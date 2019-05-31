@@ -9,8 +9,8 @@ import './assets/styles/main.scss';
 
 //Font awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo} from '@fortawesome/free-solid-svg-icons';
-library.add(faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo)
+import { faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo, faEdit, faTrash} from '@fortawesome/free-solid-svg-icons';
+library.add(faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo, faEdit, faTrash)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
