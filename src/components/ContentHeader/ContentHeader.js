@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const ContentHeader = props => {
     return (
         <header className="ContentHeader">
@@ -9,26 +11,17 @@ const ContentHeader = props => {
             </div>
             <div className="ContentHeader__buttons">
                 <div className="ContentHeader__buttons__left">
-                    <div className="ContentHeader__filters">
+                    <div className="ContentHeader__buttons__filters">
                         <p>Filtrar por:</p>
 
-                        <select className="form-white">
-                            <option>Semestre</option>
-                        </select>
-
-                        <select className="form-white">
-                            <option>Curso</option>
-                        </select>
-
-                        <p>Consultar os planos de:</p>
-                        <select className="form-white">
-                            <option>2018/2</option>
-                        </select>
+                        {props.children}
                     </div>
                 </div>
-                <div className="ContentHeader__buttons__right">
-                    <a role="button" href="bancoplanos.html" className="button-blue">Banco de planos</a>
-                </div>
+                {props.button
+                    ? <div className="ContentHeader__buttons__right">
+                            <Link to={props.button.link} role="button" href="bancoplanos.html" className="button-blue">{props.button.label}</Link>
+                        </div>
+                    : null}
             </div>
         </header>
     )

@@ -3,6 +3,7 @@
     height: auto;
     background-color: rgba(253, 253, 253, 0.822);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.123);
+    padding: 5px 0;
 
     .container{
         display: flex;
@@ -23,7 +24,7 @@
     }
 
     img.brand {
-        height: 50px;
+        height: 40px;
     }
 
     &__nav {
