@@ -29,14 +29,9 @@
             -ms-transition: all 0.2s ease-in;
             -o-transition: all 0.2s ease-in;
             transition: all 0.2s ease-in;
-
             &:hover {
                 color: darken($main-blue, 20);
             }
-        }
-
-        .logo {
-            height: 100px;
         }
     }
 
@@ -52,12 +47,23 @@
         padding: 30px 40px;
         color: rgb(77, 77, 77);
         @include card();
-
         @media (max-width: $breakpointXS) {
             & {
                 width: 70vw;
             }
         }
+
+        &__brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+
+            img {
+                width: 250px;
+            }
+        }
+
     }
 
     &__form {
@@ -92,14 +98,13 @@
         flex-direction: row;
         justify-content: space-between;
         align-content: center;
-        padding-top: 15px;
+        padding: 15px 0 10px;
 
         input[type="radio"] {
             width: 15px;
             height: auto;
             display: inline-block;
         }
-
         @media (max-width: $breakpointXS) {
             & {
                 flex-direction: column;
@@ -123,7 +128,6 @@
             &.normal {
                 background-color: $main-green;
                 margin-top: 20px;
-
                 &:hover {
                     background-color: darken($main-green, 10);
                 }
@@ -133,7 +137,6 @@
                 $fbcolor: rgb(0, 140, 255);
                 background-color: $fbcolor;
                 margin-bottom: 15px;
-
                 &:hover {
                     background-color: darken($fbcolor, 10);
                 }
@@ -142,7 +145,6 @@
             &.twitter {
                 $twittercolor: rgb(41, 186, 243);
                 background-color: $twittercolor;
-
                 &:hover {
                     background-color: darken($twittercolor, 10);
                 }

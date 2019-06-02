@@ -1,10 +1,13 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import Brand from '../../assets/images/logoIF.png';
+
 const Auth = props => {
     return (
         <main class="login__wrap">
             <div class="login__content">
-                <img class="logo" alt="logo"/>
+                <Link to="/" class="login__content__brand"><img alt="Logo ifsul" src={Brand}/></Link>
                 <form class="login__form">
                     <label for="inputEmail">Email</label>
                     <input id="inputEmail" placeholder="email@dominio.com.br"/>
@@ -27,12 +30,12 @@ const Auth = props => {
                         <a role="button" class="twitter">ENTRAR COM TWITTER</a>
                     </div>
                 </form>
-                <hr/>
+                {/* <hr/>
                 <div class="login-new">
                     <p>Não é registrado?
-                        <a href="#">Crie uma conta aqui!</a>
+                        <a href="#"> Crie uma conta aqui!</a>
                     </p>
-                </div>
+                </div> */}
             </div>
         </main>
     )

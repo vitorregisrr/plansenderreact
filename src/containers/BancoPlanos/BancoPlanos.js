@@ -14,11 +14,11 @@ const BancoPlanos = props => {
                 label: 'Novo plano',
                 link: '/novoplano'
             }}>
-                <select class="form-white">
+                <select className="form-white">
                     <option>Curso</option>
                 </select>
 
-                <select class="form-white">
+                <select className="form-white">
                     <option>Matéria</option>
                 </select>
             </ContentHeader>
