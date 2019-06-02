@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const ContentHeader = props => {
     return (
@@ -10,16 +10,22 @@ const ContentHeader = props => {
                 <h2 className="ContentHeader__desc__subtitle">{props.subtitle}</h2>
             </div>
             <div className="ContentHeader__buttons">
-                <div className="ContentHeader__buttons__left">
-                    <div className="ContentHeader__buttons__filters">
-                        <p>Filtrar por:</p>
+                {props.children
+                    ? <div className="ContentHeader__buttons__left">
+                            <div className="ContentHeader__buttons__filters">
+                                <p>Filtrar por:</p>
 
-                        {props.children}
-                    </div>
-                </div>
+                                {props.children}
+                            </div>
+                        </div>
+                    : null}
                 {props.button
                     ? <div className="ContentHeader__buttons__right">
-                            <Link to={props.button.link} role="button" href="bancoplanos.html" className="button-blue">{props.button.label}</Link>
+                            <Link
+                                to={props.button.link}
+                                role="button"
+                                href="bancoplanos.html"
+                                className="button-blue">{props.button.label}</Link>
                         </div>
                     : null}
             </div>
