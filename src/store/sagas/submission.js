@@ -3,7 +3,7 @@ import {put} from 'redux-saga/effects';
 
 import * as actions from '../action/index';
 
-export function * fetchSubmissions(action) {
+export function * fetchSubmissionsSaga(action) {
     try {
         const res = yield axios.get(`orders.json?auth=${action.token}&orderBy="userId"&equalTo="${action.userId}"`)
         const data = yield[];
