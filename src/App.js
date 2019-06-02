@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { Suspense} from 'react';
 
 import {BrowserRouter, Route} from 'react-router-dom';
 import {CSSTransition} from 'react-transition-group';
 
+import { Spinner } from './components/UI';
+
 import Layout from './hoc/Layout/Layout';
-import Auth from './containers/Auth/Auth';
-import Submissions from './containers/Submissions/Submissions';
-import HomeActions from './containers/HomeActions/HomeActions';
-import PlansBank from './containers/PlansBank/PlansBank';
+const Auth = React.lazy( () => import('./containers/Auth/Auth'));
+const Submissions = React.lazy( () => import('./containers/Submissions/Submissions'));
+const HomeActions = React.lazy( () => import('./containers/HomeActions/HomeActions'));
+const PlansBank = React.lazy( () => import('./containers/PlansBank/PlansBank'));
+const NewPlan = React.lazy( () => import('./containers/NewPlan/NewPlan'));
 
 const routes = [
     {
@@ -30,6 +33,10 @@ const routes = [
         name: 'Meus Planos',
         Component: PlansBank
 
+    }, {
+        path: '/novoplano',
+        name: 'Novo Plano',
+        Component: NewPlan
     }
 ];
 
@@ -46,7 +53,9 @@ function App() {
                                 classNames="CSSTransition--fade"
                                 unmountOnExit>
                                 <div className="page">
-                                    <Component/>
+                                    <Suspense fallback={<Spinner />}>
+                                        <Component/>
+                                    </Suspense>
                                 </div>
                             </CSSTransition>
                         )}
