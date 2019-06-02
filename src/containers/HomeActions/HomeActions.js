@@ -17,11 +17,10 @@ const HomeActions = props => {
             subtitle: "Crie ou gerencie seus planos de estudo, para depois submete-los."
 
         }, {
-            link: '/minhaconta',
-            icon: 'cogs',
-            title: 'Configurar conta!',
-            subtitle: "Configure os dados da sua conta, logins e sinalize suas matérias."
-
+            link: '/avaliar',
+            icon: 'check-square',
+            title: 'Avaliar planos!',
+            subtitle: "Avalie os planos que foram submetidos pelos professores da sua instituição."
         }, {
             link: '/instituicao',
             icon: 'atlas',
@@ -29,15 +28,16 @@ const HomeActions = props => {
             subtitle: "Gerencie os cursos, grades curriculares e professores da sua instituição."
 
         }, {
-            link: '/avaliar',
-            icon: 'check-square',
-            title: 'Avaliar planos!',
-            subtitle: "Avalie os planos que foram submetidos pelos professores da sua instituição."
+            link: '/minhaconta',
+            icon: 'cogs',
+            title: 'Configurar conta!',
+            subtitle: "Configure os dados da sua conta, logins e sinalize suas matérias."
+
         }
     ];
     return (
         <section className="HomeActions">
-            {actions.map((action, i)=> (<HomeAction
+            {actions.map((action, i) => (<HomeAction
                 key={i}
                 link={action.link}
                 icon={action.icon}

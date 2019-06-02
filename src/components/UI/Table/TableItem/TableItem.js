@@ -8,7 +8,7 @@ const tableItem = props => {
     const tools = [];
     if (props.onDelete) {
         tools.push((
-            <button key="btnDelete" onClick={props.onDelete}>
+            <button className="tool" key="btnDelete" onClick={() => props.onDelete(props.data.id)}>
                 <FontAwesomeIcon className="icon" icon="trash"/>
             </button>
         ));
@@ -16,7 +16,7 @@ const tableItem = props => {
 
     if (props.onEdit) {
         tools.push((
-            <button key="btnClick" onClick={props.onEdit}>
+            <button className="tool" key="btnClick" onClick={() => props.onEdit(props.data.id)}>
                 <FontAwesomeIcon className="icon" icon="edit"/>
             </button>
         ));
@@ -24,7 +24,7 @@ const tableItem = props => {
 
     if (props.onSend) {
         tools.push((
-            <button key="btnSend" onClick={props.onSend}>
+            <button className="tool" key="btnSend" onClick={() => props.onSend(props.data.id)}>
                 <FontAwesomeIcon className="icon" icon="paper-plane"/>
             </button>
         ));

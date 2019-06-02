@@ -7,7 +7,7 @@ import Layout from './hoc/Layout/Layout';
 import Auth from './containers/Auth/Auth';
 import Submissions from './containers/Submissions/Submissions';
 import HomeActions from './containers/HomeActions/HomeActions';
-import BancoPlanos from './containers/BancoPlanos/BancoPlanos';
+import PlansBank from './containers/PlansBank/PlansBank';
 
 const routes = [
     {
@@ -28,7 +28,7 @@ const routes = [
     }, {
         path: '/meusplanos',
         name: 'Meus Planos',
-        Component: BancoPlanos
+        Component: PlansBank
 
     }
 ];

@@ -46,7 +46,9 @@ const BancoPlanos = props => {
                     }
                 ],
                 tools: {
-                    onEdit: () => console.log('a')
+                    onEdit: (id) => console.log('EDIT', id),
+                    onSend: (id) => console.log('SEND', id),
+                    onDelete: (id) => console.log('DELETE:', id)
                 }
             }}/>
         </div>
