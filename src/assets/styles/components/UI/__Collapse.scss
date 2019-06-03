@@ -2,6 +2,7 @@
     @include card();
 
     .collapse__header {
+        width: 100%;
         border-bottom: 1px solid #0000;
         background-color: $main-blue;
         color: #ffff;
@@ -12,30 +13,27 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        transition: all 0.2s ease-in;
 
-        .collapse-togglerBtn {
+        &__toggler {
             font-size: 2.5rem;
+        }
+        
+        &:hover{
+            background-color: darken($main-blue, 15);
         }
     }
 
     .collapse__content {
         overflow: hidden;
         height: auto;
-        max-height: 1000px;
+        max-height: 9999px;
         padding: 18px 26px;
-        -webkit-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-        -moz-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-        -ms-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-        -o-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
         transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 
         &.collapsed {
             max-height: 0;
             padding: 0;
-            -webkit-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1), padding 2s;
-            -moz-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1), padding 2s;
-            -ms-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1), padding 2s;
-            -o-transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1), padding 2s;
             transition: max-height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1), padding 2s;
         }
     }

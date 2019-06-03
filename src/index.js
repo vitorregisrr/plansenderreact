@@ -17,8 +17,8 @@ import App from './App';
 
 //Font awesome imports and set icons icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo, faEdit, faTrash} from '@fortawesome/free-solid-svg-icons';
-library.add(faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo, faEdit, faTrash)
+import { faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo, faEdit, faTrash, faToggleOff, faToggleOn} from '@fortawesome/free-solid-svg-icons';
+library.add(faUser, faCog, faAngleDown, faPowerOff, faBell, faCheck, faPaperPlane, faList,faCogs, faArrowRight, faCheckSquare, faAtlas, faInfo, faEdit, faTrash, faToggleOff, faToggleOn)
 
 // Redux configs
 
