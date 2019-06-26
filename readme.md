@@ -2,9 +2,9 @@
 ## Sistema para envio e gerenciamento de planos de estudo para UFS  
 
 ### Como rodar localmente:
-Para rodar o sistema completo: Usa-se o concurrently para isso. Basta executar o comando "npm run dev" (vide package.json)
-Para rodar apenas o client: Executar o comando "npm run client"
-Para rodar apenas o server: Executar o comando "npm run server"
+Para rodar o sistema completo: Usa-se o concurrently para isso. Basta executar o comando "npm run dev" (vide package.json) 
+Para rodar apenas o client: Executar o comando "npm run client" 
+Para rodar apenas o server: Executar o comando "npm run server" 
 
 ### Branchs default:
 - dev_front: Features para o front-end;
