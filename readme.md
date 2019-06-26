@@ -19,5 +19,5 @@ Para rodar apenas o server: Executar o comando "npm run server"
 - Use o seu próprio branch, caso queira fazer um merge na release, faça apenas;
 
 ### To-do List
-[x] Estrutura que integre back-end e front-end no mesmo projeto
-[ ] ...
+- [x] Estrutura que integre back-end e front-end no mesmo projeto
+- [ ] ...
